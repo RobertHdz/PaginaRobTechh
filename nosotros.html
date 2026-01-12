@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | RobTechh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="index.html" class="text-2xl font-bold tracking-tighter text-slate-900">
+                        RobTechh<span class="text-blue-600">.</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Inicio</a>
+                    <a href="servicios.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Servicios</a>
+                    <a href="nosotros.html" class="text-sm font-bold text-blue-600 transition-colors">Nosotros</a>
+                    <a href="contacto.html" class="px-5 py-2.5 text-sm font-medium text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition-all shadow-lg hover:shadow-slate-500/20">Contactar</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-xl">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600">Inicio</a>
+                <a href="servicios.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600">Servicios</a>
+                <a href="nosotros.html" class="block px-3 py-3 rounded-md text-base font-medium text-blue-600 bg-slate-50">Nosotros</a>
+                <a href="contacto.html" class="block px-3 py-3 mt-4 text-center rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700">Contactar ahora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="pt-32 pb-16 md:pt-40 md:pb-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">Sobre Nosotros</h1>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Impulsando la transformación digital con soluciones reales.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-12 md:mb-20">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden group hover:shadow-md transition-all">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-blue-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-blue-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Nuestra Misión</h3>
+                        <p class="text-slate-600 leading-relaxed text-justify">Democratizar el acceso a tecnologías avanzadas de automatización e inteligencia artificial para pequeñas y medianas empresas.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden group hover:shadow-md transition-all">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-indigo-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6 text-indigo-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Nuestra Visión</h3>
+                        <p class="text-slate-600 leading-relaxed text-justify">Ser el referente latinoamericano en desarrollo de software pragmático y automatización de procesos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="py-16 md:py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Lo que dicen nuestros clientes</h2>
+            </div>
+
+            <div class="mb-16 max-w-2xl mx-auto bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                <h3 class="text-xl font-bold text-slate-900 mb-2 text-center">¿Ya eres cliente? Déjanos tu opinión</h3>
+                <form id="review-form" class="space-y-4 mt-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="review-name" class="block text-sm font-medium text-slate-700 mb-1">Tu nombre</label>
+                            <input type="text" id="review-name" class="block w-full rounded-lg border-slate-300 bg-white p-3 text-sm outline-none border" placeholder="Nombre" required>
+                        </div>
+                        <div>
+                            <label for="review-rating" class="block text-sm font-medium text-slate-700 mb-1">Calificación</label>
+                            <select id="review-rating" class="block w-full rounded-lg border-slate-300 bg-white p-3 text-sm outline-none border">
+                                <option value="5">★★★★★ Excelente</option>
+                                <option value="4">★★★★☆ Muy bueno</option>
+                                <option value="3">★★★☆☆ Bueno</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="review-message" class="block text-sm font-medium text-slate-700 mb-1">Tu experiencia</label>
+                        <textarea id="review-message" rows="3" class="block w-full rounded-lg border-slate-300 bg-white p-3 text-sm outline-none border" placeholder="Cuéntanos..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-bold text-white bg-slate-900 hover:bg-slate-800 transition-all">Enviar reseña</button>
+                </form>
+            </div>
+
+            <div id="reviews-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
+                    <div class="flex text-yellow-400 mb-4 text-sm">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic leading-relaxed">"RobTechh transformó completamente nuestra gestión de inventario."</p>
+                    <div>
+                        <div class="font-bold text-slate-900">Carlos Méndez</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wide">CEO, Logística Express</div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
+                    <div class="flex text-yellow-400 mb-4 text-sm">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic leading-relaxed">"La automatización de correos nos ahorró más de 20 horas semanales."</p>
+                    <div>
+                        <div class="font-bold text-slate-900">Ana Rodríguez</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wide">Directora de Marketing</div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
+                    <div class="flex text-yellow-400 mb-4 text-sm">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic leading-relaxed">"Excelente servicio y código impecable."</p>
+                    <div>
+                        <div class="font-bold text-slate-900">Miguel Torres</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wide">Founder, StartUp Tech</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-4">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="text-xl font-bold text-white tracking-tight">RobTechh.</span>
+            <p class="mt-2 text-sm">© <span id="year"></span> RobTechh. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
