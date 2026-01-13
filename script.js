@@ -22,47 +22,64 @@ const navLogo = document.getElementById('nav-logo');
 const navLinks = document.querySelectorAll('.nav-link');
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-        // Estado Scrolled (Fondo Blanco, Texto Oscuro)
-        navbar.classList.remove('bg-transparent');
-        navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-slate-200');
-        
-        // Logo y Botón Móvil
-        navLogo.classList.remove('text-white');
-        navLogo.classList.add('text-slate-900');
-        mobileMenuBtn.classList.remove('text-white');
-        mobileMenuBtn.classList.add('text-slate-600');
+// Solo ejecutar lógica de scroll si estamos en la página de inicio (detectado por la presencia de .nav-link)
+if (navLinks.length > 0) {
+    window.addEventListener('scroll', () => {
+        const navLogoSpan = navLogo.querySelector('span');
 
-        // Enlaces
-        navLinks.forEach(link => {
-            link.classList.remove('text-white', 'text-slate-200', 'hover:text-white');
-            link.classList.add('text-slate-600', 'hover:text-blue-600');
-        });
-    } else {
-        // Estado Top (Transparente, Texto Blanco)
-        navbar.classList.add('bg-transparent');
-        navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-slate-200');
-        
-        // Logo y Botón Móvil
-        navLogo.classList.add('text-white');
-        navLogo.classList.remove('text-slate-900');
-        mobileMenuBtn.classList.add('text-white');
-        mobileMenuBtn.classList.remove('text-slate-600');
-
-        // Enlaces
-        navLinks.forEach(link => {
-            link.classList.add('text-slate-200', 'hover:text-white');
-            link.classList.remove('text-slate-600', 'hover:text-blue-600');
+        if (window.scrollY > 10) {
+            // Estado Scrolled (Fondo Blanco, Texto Oscuro)
+            navbar.classList.remove('bg-transparent');
+            navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-slate-200');
             
-            // Mantener "Inicio" resaltado en blanco puro
-            if(link.textContent === 'Inicio') {
-                link.classList.remove('text-slate-200');
-                link.classList.add('text-white');
+            // Logo y Botón Móvil
+            navLogo.classList.remove('text-white');
+            navLogo.classList.add('text-slate-900');
+            
+            if(navLogoSpan) {
+                navLogoSpan.classList.remove('text-blue-400');
+                navLogoSpan.classList.add('text-blue-600');
             }
-        });
-    }
-});
+
+            mobileMenuBtn.classList.remove('text-white');
+            mobileMenuBtn.classList.add('text-slate-600');
+
+            // Enlaces
+            navLinks.forEach(link => {
+                link.classList.remove('text-white', 'text-slate-200', 'hover:text-white');
+                link.classList.add('text-slate-700', 'hover:text-blue-600');
+            });
+        } else {
+            // Estado Top (Transparente, Texto Blanco)
+            navbar.classList.add('bg-transparent');
+            navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-slate-200');
+            
+            // Logo y Botón Móvil
+            navLogo.classList.add('text-white');
+            navLogo.classList.remove('text-slate-900');
+
+            if(navLogoSpan) {
+                navLogoSpan.classList.add('text-blue-400');
+                navLogoSpan.classList.remove('text-blue-600');
+            }
+
+            mobileMenuBtn.classList.add('text-white');
+            mobileMenuBtn.classList.remove('text-slate-600');
+
+            // Enlaces
+            navLinks.forEach(link => {
+                link.classList.add('text-slate-200', 'hover:text-white');
+                link.classList.remove('text-slate-700', 'hover:text-blue-600');
+                
+                // Mantener "Inicio" resaltado en blanco puro
+                if(link.textContent.trim() === 'Inicio') {
+                    link.classList.remove('text-slate-200');
+                    link.classList.add('text-white');
+                }
+            });
+        }
+    });
+}
 
 // --- Lógica de Servicios (Modal) ---
 const serviceDetails = {
