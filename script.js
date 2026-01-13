@@ -161,7 +161,7 @@ if (contactForm) {
         const text = `Hola RobTechh, mi nombre es *${name}*.\nMi correo es: ${email}\n\n*Mensaje:*\n${message}`;
         
         // Abrir WhatsApp (Web o App)
-        const phone = "1234567890"; // ¡REEMPLAZA ESTO CON TU NÚMERO!
+        const phone = "529513423998"; // ¡REEMPLAZA ESTO CON TU NÚMERO!
         window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
     });
 }
@@ -182,7 +182,7 @@ if (reviewForm) {
         const forbiddenWords = [
             'estafa', 'fraude', 'pésimo', 'pesimo', 'horrible', 'basura', 'inútil', 'inutil', 
             'ladrón', 'ladron', 'ladrones', 'falso', 'engaño', 'terrible', 'asqueroso', 'no sirve', 
-            'mal servicio', 'mierda', 'peor servicio', 'caca', 'idiota', 'estúpido', 'estupido', 
+            'mal servicio', 'mierda', 'peor servicio', 'caca', 'idiota', 'estúpido', 'estupido','mala', 'mala empresa',
             'incompetente', 'lento', 'no funciona', 'no lo recomiendo', 'arrepentido', 'pérdida de tiempo', 
             'perdida de tiempo', 'asco', 'vergüenza', 'verguenza', 'decepción', 'decepcion', 'fatal', 
             'malísimo', 'malisimo', 'timo', 'timadores', 'mentira', 'mentirosos', 'robaron', 'robado'
