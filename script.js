@@ -16,13 +16,51 @@ menu.querySelectorAll('a').forEach(link => {
     });
 });
 
-// Efecto Navbar al hacer scroll (Opcional: agrega sombra al bajar)
+// Efecto Navbar al hacer scroll (Cambio de Transparente a Blanco)
 const navbar = document.getElementById('navbar');
+const navLogo = document.getElementById('nav-logo');
+const navLinks = document.querySelectorAll('.nav-link');
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
 window.addEventListener('scroll', () => {
     if (window.scrollY > 10) {
-        navbar.classList.add('shadow-sm');
+        // Estado Scrolled (Fondo Blanco, Texto Oscuro)
+        navbar.classList.remove('bg-transparent');
+        navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-slate-200');
+        
+        // Logo y Botón Móvil
+        navLogo.classList.remove('text-white');
+        navLogo.classList.add('text-slate-900');
+        mobileMenuBtn.classList.remove('text-white');
+        mobileMenuBtn.classList.add('text-slate-600');
+
+        // Enlaces
+        navLinks.forEach(link => {
+            link.classList.remove('text-white', 'text-slate-200', 'hover:text-white');
+            link.classList.add('text-slate-600', 'hover:text-blue-600');
+        });
     } else {
-        navbar.classList.remove('shadow-sm');
+        // Estado Top (Transparente, Texto Blanco)
+        navbar.classList.add('bg-transparent');
+        navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-slate-200');
+        
+        // Logo y Botón Móvil
+        navLogo.classList.add('text-white');
+        navLogo.classList.remove('text-slate-900');
+        mobileMenuBtn.classList.add('text-white');
+        mobileMenuBtn.classList.remove('text-slate-600');
+
+        // Enlaces
+        navLinks.forEach(link => {
+            link.classList.add('text-slate-200', 'hover:text-white');
+            link.classList.remove('text-slate-600', 'hover:text-blue-600');
+            
+            // Mantener "Inicio" resaltado en blanco puro
+            if(link.textContent === 'Inicio') {
+                link.classList.remove('text-slate-200');
+                link.classList.add('text-white');
+            }
+        });
     }
 });
 
